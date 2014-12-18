@@ -1,0 +1,35 @@
+% trapezoidalRuleDiscrete.m
+%
+% Author: Kyle Holt
+% Course: ME EN 2500
+% Homework 7
+
+% inputs: x_points and function_values
+% x_points is an array (vector) of x-coordinates 
+% function_values is an array of y-coordinates that represents the 
+%    function values at the corresponding x-coordinates
+
+% outputs: integral
+% integral is the Trapezoidal Rule approximation of  the integral
+
+% function call
+function integral = trapezoidalRuleDiscrete (x_points,function_values)
+
+% initializes boundry values
+a = x_points(1);
+b = x_points(2);
+
+% calculates function values at each boundry
+f_a = a^3 - 1.6*a^2 + 0.6*a +0.5;
+f_b = b^3 - 1.6*b^2 + 0.6*b +0.5;
+
+% calculates I based on the given equation
+integral = (b-a) * (f_a + f_b)/2;
+
+end
+ 
+
+
+
+
+
